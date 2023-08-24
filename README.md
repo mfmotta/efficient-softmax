@@ -10,7 +10,8 @@ This is the setup I've decided to use, so the steps presented here do not cover 
 
 I will go with the docker image. This command will pull it and show some information:
 
-```docker run -it --rm condaforge/mambaforge:latest mamba info
+```
+docker run -it --rm condaforge/mambaforge:latest mamba info
 ```
 
 Now I'll run the container, which I name ``softmax`` in detached mode and execute it. Check the docker documentation for more information about the flags.
@@ -62,5 +63,12 @@ jupyter kernelspec install /opt/conda/envs/cling/share/jupyter/kernels/xcpp17 --
 ```
 conda install cuda -c nvidia
 ```
- 
+
+If you had no problems, you'll find in ``which nvcc`` should return ``/opt/conda/bin/nvcc ``.
+
+6 - Now, launch the notebook with 
+
+```
+jupyter lab --allow-root
+```
 

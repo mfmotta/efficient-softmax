@@ -58,7 +58,7 @@ jupyter kernelspec install /opt/conda/envs/cling/share/jupyter/kernels/xcpp14 --
 jupyter kernelspec install /opt/conda/envs/cling/share/jupyter/kernels/xcpp17 --sys-prefix
 ```
 
-5 - Install cuda -- if you haven't already
+5 - Install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html#using-conda-to-install-the-cuda-software) -- if you haven't already
 
 ```
 conda install cuda -c nvidia

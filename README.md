@@ -47,4 +47,20 @@ mamba install xeus-cling -c conda-forge
 mamba install -c conda-forge jupyterlab
 ```
 
-Check if you have the kernels available
+  - [Installing the Kernel Spec](https://xeus-cling.readthedocs.io/en/latest/installation.html#installing-the-kernel-spec:~:text=nmake%0Anmake%20install-,Installing%20the%20Kernel%20Spec,-%C2%B6)
+
+If the steps are perfomed as above, you won't find the kernels under ``/opt/conda/share/jupyter/kernels``, but likely in ``/opt/conda/envs/cling/share/jupyter/kernels/``. To install them, run
+
+```
+jupyter kernelspec install /opt/conda/envs/cling/share/jupyter/kernels/xcpp11 --sys-prefix
+jupyter kernelspec install /opt/conda/envs/cling/share/jupyter/kernels/xcpp14 --sys-prefix
+jupyter kernelspec install /opt/conda/envs/cling/share/jupyter/kernels/xcpp17 --sys-prefix
+```
+
+5 - Install cuda -- if you haven't already
+
+```
+conda install cuda -c nvidia
+```
+ 
+

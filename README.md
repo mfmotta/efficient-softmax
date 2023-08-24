@@ -1,6 +1,6 @@
 # efficient-softmax
 
-The (Flash Attention)[https://arxiv.org/abs/2205.14135] paper references a technique to optimize the computation of the Softmax, developed in [Online normalizer calculation for softmax](https://arxiv.org/pdf/1805.02867). When going through this paper, I thought it would be cool to have its ideas in a Jupyter notebook. But is there a way to compile and execute C++, or CUDA, with Jupyter notebooks? It turns out that -- yes! with [Xeus Cling](https://github.com/jupyter-xeus/xeus-cling) So here I'll describe how I got this to work.
+The [Flash Attention](https://arxiv.org/abs/2205.14135) paper references a technique to optimize the computation of the Softmax, developed in [Online normalizer calculation for softmax](https://arxiv.org/pdf/1805.02867). When going through this paper, I thought it would be fun to have its ideas in a Jupyter notebook. But is there a way to compile and execute C++, or CUDA, with Jupyter notebooks? It turns out that -- yes! with [Xeus Cling](https://github.com/jupyter-xeus/xeus-cling) So here I'll describe how I got this to work.
 
 # Xeus Cling setup
 
@@ -22,8 +22,8 @@ docker exec -it softmax /bin/bash
 
 2 - Install [Xeus](https://github.com/jupyter-xeus/xeus) with
 
-
-```mamba install xeus -c conda-forge
+```
+mamba install xeus -c conda-forge
 ```
 
 3 - Install [Cling]( https://github.com/jupyter-xeus/xeus-cling) 

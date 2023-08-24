@@ -8,17 +8,10 @@ This is the setup I've decided to use, so the steps presented here do not cover 
 
 1 - Install [mamba](https://mamba.readthedocs.io/en/latest/mamba-installation.html#mamba-install)
 
-I will go with the docker image. This command will pull it and show some information:
 
 ```
-docker run -it --rm condaforge/mambaforge:latest mamba info
-```
-
-Now I'll run the container, which I name ``softmax`` in detached mode and execute it. Check the docker documentation for more information about the flags.
-
-```
-docker run -v /path-to-project/:/home/efficient-softmax --gpus all -d --name softmax -e USER=$USER -w /home -it --rm condaforge/mambaforge:latest /bin/bash
-docker exec -it softmax /bin/bash
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh
 ```
 
 2 - Install [Xeus](https://github.com/jupyter-xeus/xeus) with
